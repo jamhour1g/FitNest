@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activitys.StartScreenActivity">
+
+    <TextView
+        android:id="@+id/fit_nest_text_view"
+        android:layout_width="256dp"
+        android:layout_height="52dp"
+        android:fontFamily="@font/alata"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="FitNest"
+        android:textSize="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/svgImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.575" />
+
+    <ImageView
+        android:id="@+id/svgImageView"
+        android:layout_width="411dp"
+        android:layout_height="429dp"
+        app:layout_constraintBottom_toTopOf="@+id/get_to_your_ideal_shape_text_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.854"
+        app:srcCompat="@drawable/main_screen_guy_stretching" />
+
+    <TextView
+        android:id="@+id/get_to_your_ideal_shape_text_view"
+        android:layout_width="298dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="560dp"
+        android:fontFamily="@font/alata"
+        android:text="Get to your ideal shape"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.142"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/exercising_at_home_text_view"
+        android:layout_width="207dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/alata"
+        android:text="by exercising at home"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.078"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/get_to_your_ideal_shape_text_view" />
+
+    <ImageView
+        android:id="@+id/next_screen_icon"
+        android:layout_width="54dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.798"
+        app:layout_constraintStart_toEndOf="@+id/exercising_at_home_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/svgImageView"
+        app:layout_constraintVertical_bias="0.621"
+        app:srcCompat="@drawable/outline_arrow_circle_right_24" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
