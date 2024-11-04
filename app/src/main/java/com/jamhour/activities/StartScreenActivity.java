@@ -1,4 +1,4 @@
-package com.jamhour.activitys;
+package com.jamhour.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
