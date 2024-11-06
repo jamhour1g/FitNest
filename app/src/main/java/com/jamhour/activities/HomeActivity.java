@@ -6,9 +6,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.material.divider.MaterialDividerItemDecoration;
 import com.jamhour.R;
 import com.jamhour.android_util.CategoryRecyclerViewAdapter;
+import com.jamhour.android_util.PaddedItemDecoration;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -20,12 +20,7 @@ public class HomeActivity extends AppCompatActivity {
         RecyclerView workOutCategories = findViewById(R.id.workOutCategoriesRecyclerView);
         workOutCategories.setAdapter(new CategoryRecyclerViewAdapter());
         workOutCategories.setLayoutManager(new LinearLayoutManager(this));
-        workOutCategories.addItemDecoration(
-                new MaterialDividerItemDecoration(
-                        this,
-                        MaterialDividerItemDecoration.VERTICAL
-                )
-        );
+        workOutCategories.addItemDecoration(new PaddedItemDecoration(15));
 
     }
 
