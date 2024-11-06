@@ -8,7 +8,7 @@
     tools:context=".activities.HomeActivity">
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/alata"
         android:text="Find your"
@@ -16,7 +16,7 @@
         android:textSize="24sp" />
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/alata"
         android:text="Favorite Workout"
@@ -24,10 +24,16 @@
         android:textSize="24sp"
         android:textStyle="bold" />
 
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="10dp"
+        android:background="?android:attr/listDivider" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/workOutCategoriesRecyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:padding="5dp" />
 
 </LinearLayout>
