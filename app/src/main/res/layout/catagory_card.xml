@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="370dp"
+    android:layout_height="180dp"
+    android:elevation="5dp"
+    app:cardCornerRadius="10dp"
+    app:contentPadding="5dp">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp"
+        tools:layout_editor_absoluteX="-2dp"
+        tools:layout_editor_absoluteY="27dp">
+
+        <TextView
+            android:id="@+id/numOfExercisesTextView"
+            android:layout_width="157dp"
+            android:layout_height="24dp"
+            android:layout_marginBottom="68dp"
+            android:drawableRight="@drawable/ic_action_name"
+            android:drawablePadding="5dp"
+            android:text="50"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.968"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/categoryNameTextView"
+            android:layout_width="157dp"
+            android:layout_height="23dp"
+            android:text="Category Name"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.968"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/categoryDurationTextView"
+            android:layout_width="157dp"
+            android:layout_height="24dp"
+            android:drawablePadding="5dp"
+            android:text="50"
+            android:textAlignment="center"
+            app:drawableRightCompat="@drawable/baseline_access_time_filled_24"
+            app:layout_constraintBottom_toTopOf="@+id/numOfExercisesTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.968"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/categoryNameTextView"
+            app:layout_constraintVertical_bias="0.466" />
+
+        <ImageView
+            android:id="@+id/categoryImageView"
+            android:layout_width="163dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="67dp"
+            android:src="@android:drawable/ic_menu_gallery"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/categoryNameTextView"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/seeDetailsImageView"
+            android:layout_width="42dp"
+            android:layout_height="33dp"
+            android:layout_marginStart="139dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/outline_arrow_circle_right_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/categoryImageView"
+            app:layout_constraintTop_toBottomOf="@+id/numOfExercisesTextView"
+            app:layout_constraintVertical_bias="0.909" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
