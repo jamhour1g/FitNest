@@ -7,22 +7,59 @@
     android:padding="10dp"
     tools:context=".activities.HomeActivity">
 
-    <TextView
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/alata"
-        android:text="Find your"
-        android:textColor="@color/secondary_color_gray"
-        android:textSize="24sp" />
+        android:orientation="horizontal">
 
-    <TextView
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/alata"
+            android:text="FitNest"
+            android:textColor="@color/secondary_color"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="?android:attr/listDivider" />
+
+        <RadioButton
+            android:id="@+id/categoriesSearchButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:button="@drawable/search_icon"
+            android:padding="10dp" />
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/alata"
-        android:text="Favorite Workout"
-        android:textColor="@color/secondary_color"
-        android:textSize="24sp"
-        android:textStyle="bold" />
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/alata"
+            android:text="Find your "
+            android:textColor="@color/secondary_color_gray"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/alata"
+            android:text="favorite workout categories! "
+            android:textColor="@color/secondary_color"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
 
     <View
         android:id="@+id/divider"
