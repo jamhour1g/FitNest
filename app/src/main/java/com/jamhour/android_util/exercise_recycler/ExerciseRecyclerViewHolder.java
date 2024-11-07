@@ -11,6 +11,8 @@ import com.jamhour.R;
 import com.jamhour.android_util.ImageViewFromUri;
 import com.jamhour.data.core.Exercise;
 
+import java.time.Duration;
+
 public class ExerciseRecyclerViewHolder extends RecyclerView.ViewHolder {
 
     private final TextView exerciseNameTextView;
@@ -32,7 +34,14 @@ public class ExerciseRecyclerViewHolder extends RecyclerView.ViewHolder {
     public void updateViewForExercise(Exercise exercise) {
         exerciseNameTextView.setText(exercise.getName());
         exerciseBodyParts.setText(exercise.getTrainingBodyParts());
-        exerciseDurationTextView.setText(exercise.getDuration().toString());
+        Duration duration = exercise.getDuration();
+        exerciseDurationTextView.setText(
+                "%2dH, %2dM"
+                        .formatted(
+                                duration.toHours(),
+                                duration.toMinutesPart()
+                        )
+        );
         exerciseLevelTextView.setText(exercise.getLevel().toString());
         ImageViewFromUri.loadImage(exercise.getImageUri(), exerciseCategoryImageView);
     }
