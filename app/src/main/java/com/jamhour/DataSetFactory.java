@@ -68,11 +68,5 @@ public final class DataSetFactory {
         return categories;
     }
 
-    public static List<Exercise> getExercises() {
-        return categories.stream()
-                .flatMap(category -> category.getExercises().stream())
-                .toList();
-    }
-
 }
 
