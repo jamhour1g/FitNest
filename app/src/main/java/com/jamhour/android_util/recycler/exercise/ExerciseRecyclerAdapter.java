@@ -1,4 +1,4 @@
-package com.jamhour.android_util.exercise_recycler;
+package com.jamhour.android_util.recycler.exercise;
 
 import android.view.LayoutInflater;
 import android.view.ViewGroup;

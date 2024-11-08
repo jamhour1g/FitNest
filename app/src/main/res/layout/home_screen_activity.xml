@@ -12,11 +12,23 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
+        <ImageView
+            android:id="@+id/userProfileImageViewHomeScreen"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:background="@drawable/circle_background"
+            android:padding="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/person_face_up_close" />
+
         <TextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/alata"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
             android:text="FitNest"
             android:textColor="@color/secondary_color"
             android:textSize="25sp"

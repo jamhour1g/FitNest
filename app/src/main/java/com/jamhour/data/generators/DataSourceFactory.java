@@ -7,7 +7,7 @@ import java.util.List;
 
 public final class DataSourceFactory {
 
-    private static final DataSource DEFAULT_DATA_SOURCE = new PreDefinedDataSource();
+    private static final DataSource DEFAULT_DATA_SOURCE = getPreDefinedDataSource();
 
     private DataSourceFactory() {
     }

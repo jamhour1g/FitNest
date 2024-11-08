@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FitNest">
         <activity
+            android:name=".activities.UserProfileActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.ExercisesActivity"
             android:exported="false" />
         <activity

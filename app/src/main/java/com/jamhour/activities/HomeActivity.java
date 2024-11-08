@@ -5,9 +5,11 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.activity.result.ActivityResultLauncher;
@@ -18,10 +20,12 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.jamhour.R;
+import com.jamhour.android_util.ImageViewFromUri;
 import com.jamhour.android_util.PaddedItemDecoration;
-import com.jamhour.android_util.category_recycler.CategoryRecyclerViewAdapter;
+import com.jamhour.android_util.recycler.category.CategoryRecyclerViewAdapter;
 import com.jamhour.data.core.Category;
 import com.jamhour.data.generators.DataSourceFactory;
+import com.jamhour.data.generators.UserFactory;
 
 public class HomeActivity extends AppCompatActivity {
     private final ActivityResultLauncher<String> requestPermissionLauncher = registerForActivityResult(
@@ -48,10 +52,25 @@ public class HomeActivity extends AppCompatActivity {
 
         requestPermissionLauncher.launch(Manifest.permission.INTERNET);
 
+        updateProfileImage();
+        updateCategoriesRecyclerView();
+    }
+
+    private void updateCategoriesRecyclerView() {
         RecyclerView workOutCategories = findViewById(R.id.workOutCategoriesRecyclerView);
         workOutCategories.setAdapter(new CategoryRecyclerViewAdapter());
         workOutCategories.setLayoutManager(new LinearLayoutManager(this));
         workOutCategories.addItemDecoration(new PaddedItemDecoration(15));
+    }
+
+    private void updateProfileImage() {
+        ImageView imageView = findViewById(R.id.userProfileImageViewHomeScreen);
+        UserFactory.getDefaultUser().getImageUri().ifPresentOrElse(
+                uri -> ImageViewFromUri.loadImage(uri, imageView),
+                () -> Log.d(HomeActivity.class.getName(), "onCreate: default user has no image")
+        );
+
+        imageView.setOnClickListener(v -> startActivity(new Intent(this, UserProfileActivity.class)));
     }
 
     private void displaySearchAlert(View callerView) {

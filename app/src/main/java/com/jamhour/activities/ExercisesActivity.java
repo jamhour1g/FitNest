@@ -1,7 +1,6 @@
 package com.jamhour.activities;
 
 import android.os.Bundle;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -12,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.jamhour.R;
 import com.jamhour.android_util.ImageViewFromUri;
 import com.jamhour.android_util.PaddedItemDecoration;
-import com.jamhour.android_util.exercise_recycler.ExerciseRecyclerAdapter;
+import com.jamhour.android_util.recycler.exercise.ExerciseRecyclerAdapter;
 import com.jamhour.data.core.Category;
 
 import java.time.Duration;
@@ -29,8 +28,6 @@ public class ExercisesActivity extends AppCompatActivity {
         TextView exerciseCategoryNumOfExercisesTextView = findViewById(R.id.exerciseCategoryNumOfExercisesTextView);
         TextView exerciseCategoryDurationTextView = findViewById(R.id.exerciseCategoryDurationTextView);
         TextView exerciseCategoryNameTextView = findViewById(R.id.exerciseCategoryNameTextView);
-
-        Button exerciseFilterButton = findViewById(R.id.exerciseFilterButton);
 
         RecyclerView exerciseRecyclerView = findViewById(R.id.exercisesRecyclerView);
         exerciseRecyclerView.setLayoutManager(new LinearLayoutManager(this));

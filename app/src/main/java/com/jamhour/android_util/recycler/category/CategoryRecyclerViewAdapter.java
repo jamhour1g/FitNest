@@ -1,4 +1,4 @@
-package com.jamhour.android_util.category_recycler;
+package com.jamhour.android_util.recycler.category;
 
 import android.content.Context;
 import android.content.Intent;

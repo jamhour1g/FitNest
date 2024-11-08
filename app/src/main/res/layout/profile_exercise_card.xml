@@ -26,7 +26,7 @@
             app:cardCornerRadius="15dp">
 
             <ImageView
-                android:id="@+id/exercise_categoryImageView"
+                android:id="@+id/userProfileExerciseImageView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:srcCompat="@android:drawable/ic_menu_gallery" />
@@ -40,7 +40,7 @@
             android:padding="10dp">
 
             <TextView
-                android:id="@+id/exerciseNameTextView"
+                android:id="@+id/userProfileExerciseNameTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/alata"
@@ -55,7 +55,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/exerciseBodyParts"
+                    android:id="@+id/userProfileExerciseBodyParts"
                     android:layout_width="wrap_content"
                     android:layout_height="60dp"
                     android:fontFamily="@font/alata"
@@ -80,7 +80,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/exerciseLevelTextView"
+                    android:id="@+id/userProfileExerciseLevelTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="6"
@@ -94,7 +94,7 @@
                     app:drawableLeftCompat="@drawable/difficulties_icon" />
 
                 <TextView
-                    android:id="@+id/exerciseDurationTextView"
+                    android:id="@+id/userProfileExerciseDurationTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="6"
@@ -108,11 +108,11 @@
                     app:drawableLeftCompat="@drawable/baseline_access_time_filled_24" />
 
                 <CheckBox
-                    android:id="@+id/favoriteCheckBox"
+                    android:id="@+id/trash"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="6"
-                    android:button="@drawable/favorite_icon" />
+                    android:button="@drawable/recycle_bin" />
 
             </LinearLayout>
 
