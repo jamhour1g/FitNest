@@ -9,16 +9,16 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.jamhour.DataSetFactory;
 import com.jamhour.R;
 import com.jamhour.activities.ExercisesActivity;
 import com.jamhour.data.core.Category;
+import com.jamhour.data.generators.DataSourceFactory;
 
 import java.util.List;
 
 public class CategoryRecyclerViewAdapter extends RecyclerView.Adapter<CategoryRecyclerViewHolder> {
 
-    private final List<Category> categories = DataSetFactory.getCategories();
+    private final List<Category> categories = DataSourceFactory.getCategories();
 
     @Override
     public int getItemCount() {

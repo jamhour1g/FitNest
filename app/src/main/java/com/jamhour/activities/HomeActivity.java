@@ -17,11 +17,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.jamhour.DataSetFactory;
 import com.jamhour.R;
 import com.jamhour.android_util.PaddedItemDecoration;
 import com.jamhour.android_util.category_recycler.CategoryRecyclerViewAdapter;
 import com.jamhour.data.core.Category;
+import com.jamhour.data.generators.DataSourceFactory;
 
 public class HomeActivity extends AppCompatActivity {
     private final ActivityResultLauncher<String> requestPermissionLauncher = registerForActivityResult(
@@ -72,7 +72,7 @@ public class HomeActivity extends AppCompatActivity {
             EditText categoryEditText = searchDialogView.findViewById(R.id.categoryToSearchForEditText);
             String category = categoryEditText.getText().toString();
 
-            DataSetFactory.getCategories().stream()
+            DataSourceFactory.getCategories().stream()
                     .filter(c -> c.getName().equalsIgnoreCase(category))
                     .findFirst()
                     .ifPresentOrElse(
