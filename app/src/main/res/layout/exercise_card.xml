@@ -34,7 +34,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="2"
             android:orientation="vertical"
             android:padding="10dp">
@@ -57,8 +57,9 @@
                 <TextView
                     android:id="@+id/exerciseBodyParts"
                     android:layout_width="wrap_content"
-                    android:layout_height="70dp"
+                    android:layout_height="60dp"
                     android:fontFamily="@font/alata"
+                    android:padding="7dp"
                     android:text="None"
                     android:textColor="@color/secondary_color_gray"
                     android:textSize="11sp" />
@@ -68,12 +69,14 @@
                 android:id="@+id/divider3"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:layout_weight="2"
+                android:layout_weight="1"
                 android:background="?android:attr/listDivider" />
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
                 android:orientation="horizontal">
 
                 <TextView
@@ -104,13 +107,14 @@
                     android:textStyle="normal"
                     app:drawableLeftCompat="@drawable/baseline_access_time_filled_24" />
 
-                <ImageView
-                    android:id="@+id/imageView2"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="end"
-                    android:layout_weight="0"
-                    app:srcCompat="@drawable/favorite_icon" />
+                <RadioButton
+                    android:id="@+id/radioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:button="@drawable/favorite_icon" />
+
             </LinearLayout>
 
         </LinearLayout>

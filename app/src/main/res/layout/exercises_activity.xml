@@ -48,6 +48,7 @@
                     android:id="@+id/exerciseCategoryDurationTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:drawablePadding="5dp"
                     android:fontFamily="@font/alata"
                     android:padding="5dp"
                     android:text="50 Hours"
@@ -71,17 +72,15 @@
                 <Space
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    android:layout_weight="1" />
+                    android:layout_weight="8" />
 
-                <Button
+                <RadioButton
                     android:id="@+id/exerciseFilterButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="0"
-                    android:elevation="20dp"
-                    android:text="Filter"
-                    android:textAlignment="center"
-                    app:icon="@drawable/filters_icon" />
+                    android:button="@drawable/filters_icon"
+                    android:elevation="20dp" />
 
 
             </LinearLayout>
