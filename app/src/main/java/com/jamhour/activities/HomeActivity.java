@@ -57,7 +57,7 @@ public class HomeActivity extends AppCompatActivity {
     private void displaySearchAlert(View callerView) {
         Context context = callerView.getContext();
         View searchDialogView = getLayoutInflater()
-                .inflate(R.layout.search_dialog_layout, null);
+                .inflate(R.layout.search_dialog, null);
         new AlertDialog.Builder(context)
                 .setTitle("Search for your favorite category")
                 .setMessage("Please enter the name of the category you want to search for")
