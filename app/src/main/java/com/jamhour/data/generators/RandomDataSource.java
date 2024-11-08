@@ -30,16 +30,18 @@ class RandomDataSource implements DataSource {
 
 
     static final List<String> IMAGE_URLS = List.of(
-            "https://img.freepik.com/free-vector/young-woman-fitness-dancing-home-illustrated_23-2148886738.jpg?ga=GA1.1.912492376.1685430241&semt=ais_hybrid",
             "https://img.freepik.com/free-vector/training-home-concept_23-2148479238.jpg?ga=GA1.1.912492376.1685430241&semt=ais_hybrid",
             "https://img.freepik.com/free-vector/coach-concept-illustration_114360-28592.jpg?ga=GA1.1.912492376.1685430241&semt=ais_hybrid",
             "https://img.freepik.com/free-vector/workout-concept-illustration_114360-1065.jpg?ga=GA1.1.912492376.1685430241&semt=ais_hybrid",
             "https://img.freepik.com/free-vector/flat-illustration-international-yoga-day-celebration_23-2150371893.jpg?ga=GA1.1.912492376.1685430241&semt=ais_hybrid",
-            "https://img.freepik.com/free-vector/man-practicing-dance-fitness-home_23-2148890578.jpg?ga=GA1.1.912492376.1685430241&semt=ais_hybrid",
             "https://img.freepik.com/free-vector/workout-concept-illustration_114360-28397.jpg?ga=GA1.1.912492376.1685430241&semt=ais_hybrid",
-            "https://img.freepik.com/free-vector/man-practicing-dance-fitness-home_23-2148890578.jpg?ga=GA1.1.912492376.1685430241&semt=ais_hybrid",
             "https://img.freepik.com/free-vector/male-friends-exercising-gym-together_74855-7600.jpg?ga=GA1.1.912492376.1685430241&semt=ais_hybrid",
-            "https://img.freepik.com/free-vector/man-weight-lifting-with-sports-icons_24877-51360.jpg?ga=GA1.1.912492376.1685430241&semt=ais_hybrid"
+            "https://img.freepik.com/free-vector/man-weight-lifting-with-sports-icons_24877-51357.jpg?ga=GA1.1.912492376.1685430241&semt=ais_hybrid",
+            "https://img.freepik.com/free-vector/illustrated-flat-dance-fitness-home_23-2148875719.jpg?ga=GA1.1.912492376.1685430241&semt=ais_hybrid",
+            "https://img.freepik.com/free-vector/stability-ball-concept-illustration_114360-3013.jpg?ga=GA1.1.912492376.1685430241&semt=ais_hybrid",
+            "https://img.freepik.com/free-vector/weights-concept-illustration_114360-7280.jpg?ga=GA1.1.912492376.1685430241&semt=ais_hybrid",
+            "https://img.freepik.com/free-vector/dumbbell-exercise-concept-illustration_114360-9701.jpg?ga=GA1.1.912492376.1685430241&semt=ais_hybrid",
+            "https://img.freepik.com/free-vector/woman-fitness-dancing-home_23-2148882333.jpg?ga=GA1.1.912492376.1685430241&semt=ais_hybrid"
     );
 
     private final int numberOfCategories;
