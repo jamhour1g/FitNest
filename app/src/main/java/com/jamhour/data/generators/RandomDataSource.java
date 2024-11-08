@@ -10,6 +10,7 @@ import java.time.Duration;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
+import java.util.StringJoiner;
 import java.util.stream.Stream;
 
 class RandomDataSource implements DataSource {
@@ -67,9 +68,17 @@ class RandomDataSource implements DataSource {
         );
 
         private static Exercise createExercise() {
+
+            int numOfParts = RANDOM.nextInt(BODY_PARTS.size());
+            StringJoiner joiner = new StringJoiner(", ");
+            for (int i = 0; i < numOfParts; i++) {
+                joiner.add(BODY_PARTS.get(RANDOM.nextInt(BODY_PARTS.size())));
+            }
+            String parts = joiner.toString();
+
             return new ExerciseImpl(
-                    EXERCISE_NAMES.get(RANDOM.nextInt(EXERCISE_NAMES.size())),
-                    BODY_PARTS.get(RANDOM.nextInt(BODY_PARTS.size())),
+                    EXERCISE_NAMES.get(numOfParts),
+                    parts,
                     IMAGE_URLS.get(RANDOM.nextInt(IMAGE_URLS.size())),
                     Duration.ofMinutes(RANDOM.nextInt(60)),
                     Exercise.ExerciseLevel.values()[RANDOM.nextInt(Exercise.ExerciseLevel.values().length)]
@@ -85,13 +94,42 @@ class RandomDataSource implements DataSource {
 
     private static class RandomCategory {
 
-        static final List<String> CATEGORY_NAMES = Arrays.asList(
+        static final List<String> CATEGORY_NAMES = List.of(
                 "Strength Training",
-                "Cardio",
-                "Flexibility",
-                "HIIT",
-                "Core Strength",
-                "Balance and Stability"
+                "Cardio Blast",
+                "Flexibility and Mobility",
+                "Core Conditioning",
+                "HIIT (High-Intensity Interval Training)",
+                "Endurance Training",
+                "Balance and Stability",
+                "Full Body Workout",
+                "Upper Body Strength",
+                "Lower Body Power",
+                "Yoga and Mindfulness",
+                "Speed and Agility",
+                "Functional Training",
+                "Bodyweight Exercises",
+                "Powerlifting",
+                "Plyometrics",
+                "CrossFit",
+                "Martial Arts Training",
+                "Low-Impact Cardio",
+                "Aerobic Conditioning",
+                "Circuit Training",
+                "Recovery and Stretching",
+                "Resistance Band Exercises",
+                "Olympic Lifting",
+                "Dance Fitness",
+                "Sports-Specific Training",
+                "Barre Workouts",
+                "Posture and Alignment",
+                "Rehabilitation and Injury Prevention",
+                "Senior Fitness",
+                "Prenatal and Postnatal Training",
+                "Boot Camp",
+                "Metabolic Conditioning",
+                "Obstacle Course Training",
+                "Swim Training"
         );
 
         private static Category createCategory(int numOfExercises) {
